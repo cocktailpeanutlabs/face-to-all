@@ -17,14 +17,29 @@ module.exports = async (kernel) => {
         message: [
           "pip install {{gpu === 'nvidia' ? 'onnxruntime-gpu' : 'onnxruntime'}}",
           "pip install mediapipe",
-          "pip install -r requirements.txt"
+          "pip install -r requirements.txt",
         ],
       }
     }, {
-      method: "fs.share",
+      method: "shell.run",
       params: {
-        venv: "app/env"
+        path: "app/data",
+        message: "mkdir models",
       }
+    }, {
+      method: "shell.run",
+      params: {
+        path: "app/data/models",
+        message: [
+          "git lfs install",
+          "git clone --depth 1 https://huggingface.co/cocktailpeanut/antelopev2"
+        ]
+      }
+//    }, {
+//      method: "fs.share",
+//      params: {
+//        venv: "app/env"
+//      }
     }, {
       method: "notify",
       params: {
