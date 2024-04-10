@@ -17,7 +17,6 @@ module.exports = async (kernel) => {
           CIVITAI_TOKEN: "{{input}}"
         },
         message: [
-          "{{platform === 'win32' ? 'set' : 'env'}}",
           "python app.py",
         ],
         on: [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
