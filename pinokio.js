@@ -26,12 +26,32 @@ module.exports = {
             icon: 'fa-solid fa-terminal',
             text: "Terminal",
             href: "start.js",
+          }, {
+            icon: 'fa-solid fa-link',
+            text: "CivitAI",
+            href: "https://civitai.com/",
+            popout; true
+          }, {
+            icon: 'fa-solid fa-link',
+            text: "HuggingFace",
+            href: "https://huggingface.co/,
+            popout; true
           }]
         } else {
           return [{
             icon: 'fa-solid fa-terminal',
             text: "Terminal",
             href: "start.js",
+          }, {
+            icon: 'fa-solid fa-link',
+            text: "CivitAI",
+            href: "https://civitai.com/",
+            popout; true
+          }, {
+            icon: 'fa-solid fa-link',
+            text: "HuggingFace",
+            href: "https://huggingface.co/,
+            popout; true
           }]
         }
       } else {
