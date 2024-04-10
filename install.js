@@ -6,7 +6,7 @@ module.exports = async (kernel) => {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://huggingface.co/spaces/cocktailpeanut/face-to-all app",
+          "git clone https://huggingface.co/spaces/cocktailpeanut/face-to-all-2 app",
         ]
       }
     }, {
