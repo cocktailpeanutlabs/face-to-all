@@ -30,12 +30,12 @@ module.exports = {
             icon: 'fa-solid fa-link',
             text: "CivitAI",
             href: "https://civitai.com",
-            popout; true
+            popout: true
           }, {
             icon: 'fa-solid fa-link',
             text: "HuggingFace",
             href: "https://huggingface.co",
-            popout; true
+            popout: true
           }]
         } else {
           return [{
@@ -46,12 +46,12 @@ module.exports = {
             icon: 'fa-solid fa-link',
             text: "CivitAI",
             href: "https://civitai.com",
-            popout; true
+            popout: true
           }, {
             icon: 'fa-solid fa-link',
             text: "HuggingFace",
             href: "https://huggingface.co",
-            popout; true
+            popout: true
           }]
         }
       } else {
