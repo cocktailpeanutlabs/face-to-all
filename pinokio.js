@@ -29,12 +29,12 @@ module.exports = {
           }, {
             icon: 'fa-solid fa-link',
             text: "CivitAI",
-            href: "https://civitai.com/",
+            href: "https://civitai.com",
             popout; true
           }, {
             icon: 'fa-solid fa-link',
             text: "HuggingFace",
-            href: "https://huggingface.co/,
+            href: "https://huggingface.co",
             popout; true
           }]
         } else {
@@ -45,12 +45,12 @@ module.exports = {
           }, {
             icon: 'fa-solid fa-link',
             text: "CivitAI",
-            href: "https://civitai.com/",
+            href: "https://civitai.com",
             popout; true
           }, {
             icon: 'fa-solid fa-link',
             text: "HuggingFace",
-            href: "https://huggingface.co/,
+            href: "https://huggingface.co",
             popout; true
           }]
         }
