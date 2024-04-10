@@ -17,5 +17,15 @@ module.exports = {
       path: "civitai.txt",
       text: "{{input.key}}"
     }
-  }]    
+  }, {
+    method: "log",
+    params: {
+      raw: "successfully saved to civitai.txt!"
+    }
+  }, {
+    method: "notify",
+    params: {
+      html: "successfully saved to civitai.txt! now start the app."
+    }
+  }]
 }
