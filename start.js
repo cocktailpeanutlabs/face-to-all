@@ -2,7 +2,7 @@ module.exports = async (kernel) => {
   let script = {
     daemon: true,
     run: [{
-      when: "{{kernel.exists(cwd, 'civitai.txt')}}",
+      when: "{{kernel.script.exists(cwd, 'civitai.txt')}}",
       method: "fs.read",
       params: {
         path: "civitai.txt",
