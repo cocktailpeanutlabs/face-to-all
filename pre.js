@@ -1,15 +1,15 @@
 module.exports = (config, kernel) => {
   const x = {
     "win32": {
-      "nvidia": `pip install torch torchvision torchaudio ${config.xformers ? 'xformers' : ''} --index-url https://download.pytorch.org/whl/cu121`,
-      "amd": "pip install torch-directml",
-      "cpu": "pip install torch torchvision torchaudio"
+      "nvidia": `pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 ${config.xformers ? 'xformers' : ''} --index-url https://download.pytorch.org/whl/cu124`,
+      "amd": "pip install torch-directml torchvision numpy==1.26.4",
+      "cpu": "pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cpu"
     },
-    "darwin": "pip install torch torchvision torchaudio",
+    "darwin": "pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cpu",
     "linux": {
-      "nvidia": `pip install torch torchvision torchaudio ${config.xformers ? 'xformers' : ''}`,
-      "amd": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.7",
-      "cpu": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu"
+      "nvidia": `pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 ${config.xformers ? 'xformers' : ''} --index-url https://download.pytorch.org/whl/cu124`,
+      "amd": "pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/rocm6.0",
+      "cpu": "pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cpu"
     }
   }
   if (config.torch) {
