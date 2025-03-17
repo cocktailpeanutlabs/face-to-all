@@ -16,7 +16,16 @@ module.exports = (config, kernel) => {
     if (kernel.platform === "darwin") {
       return x[kernel.platform]
     } else {
-      return x[kernel.platform][kernel.gpu]
+      console.log("kernel.gpu=", kernel.gpu)
+      console.log("kernel.gpu_model=", kernel.gpu_model)
+      if (kernel.gpu_model) {
+        console.log("50 series?", / 50.+/.test(kernel.gpu_model))
+      }
+      if (kernel.gpu === 'nvidia' && kernel.gpu_model && / 50.+/.test(kernel.gpu_model)) {
+        return "pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128"
+      } else {
+        return x[kernel.platform][kernel.gpu]
+      }
     }
   }
 }
